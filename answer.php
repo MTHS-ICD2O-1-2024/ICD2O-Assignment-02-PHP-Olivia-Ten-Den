@@ -45,28 +45,21 @@
       <div class="right-image">
         <img src="./images/Volume_Prism_Cylinder.jpg" alt="Image: Orange rectangular prism on left, yellow cylinder on right, each with formula to find their volume on top of them." width="250" />
       </div>
-      <br />
-      <div class="page-content">Please enter the object's base area (cm²) and height (cm).</div>
       <div class="page-content-php">
-        <form action="answer.php" method="GET">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="base-area-of-object">
-            <label class="mdl-textfield__label" for="base-area-of-object">Enter base area of object (cm²)</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <br />
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="height-of-object">
-            <label class="mdl-textfield__label" for="height-of-object">Enter height of object (cm)</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <br />
-          <!-- Accent-colored raised button with ripple -->
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            type="submit">
-            Calculate
-          </button>
-        </form>
+        <div id="user-info">
+          <?php
+          $baseAreaOfObject = $_GET["base-area-of-object"];
+          $heightOfObject = $_GET["height-of-object"];
+
+          // process
+          $volume = ($baseAreaOfObject * $heightOfObject);
+
+          // output
+          echo "If the object has a base area of = " . $baseAreaOfObject . " cm² and the height of = " . $heightOfObject . " cm:";
+          echo "<br />";
+          echo "Than the volume of the triangle is " . $volume . " cm³.";
+          ?>
+        </div>
       </div>
     </main>
   </div>
