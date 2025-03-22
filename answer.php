@@ -45,21 +45,19 @@
       <div class="right-image">
         <img src="./images/Volume_Prism_Cylinder.jpg" alt="Image: Orange rectangular prism on left, yellow cylinder on right, each with formula to find their volume on top of them." width="250" />
       </div>
-      <div class="page-content-php">
-        <div id="user-info">
-          <?php
-          $baseAreaOfObject = $_GET["base-area-of-object"];
-          $heightOfObject = $_GET["height-of-object"];
+      <div>
+        <?php
+        $baseAreaOfObject = $_GET["base-area-of-object"];
+        $heightOfObject = $_GET["height-of-object"];
 
-          // process
-          $volume = ($baseAreaOfObject * $heightOfObject);
+        // process
+        $volume = $baseAreaOfObject * $heightOfObject;
 
-          // output
-          echo "If the object has a base area of = " . $baseAreaOfObject . " cm² and the height of = " . $heightOfObject . " cm:";
-          echo "<br />";
-          echo "Than the volume of the triangle is " . $volume . " cm³.";
-          ?>
-        </div>
+        // output
+        echo "<p class='page-content'>If the object has a base area of = " . $baseAreaOfObject . " cm² and the height of = " . $heightOfObject . " cm:</p>";
+        //echo "<br />";
+        echo "<p class='page-content'>then the volume of the triangle is " . $volume . " cm³.</p>";
+        ?>
       </div>
     </main>
   </div>

@@ -47,7 +47,7 @@
       </div>
       <br />
       <div class="page-content">Please enter the object's base area (cm²) and height (cm).</div>
-      <div class="page-content-php">
+      <div>
         <form action="answer.php" method="GET">
           <div class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="base-area-of-object">
